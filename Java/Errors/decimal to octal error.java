@@ -8,15 +8,21 @@ public class Main {
 
     public static int convertDecimalToOctal(int decimal)
     {
-        int octalNumber = 0, i = 1;
-
-        while (decimal != 0)
-        {
-            octalNumber += (decimal % 2) * i;
-            decimal /= 2;
-            i *= 10;
+       // array to store octal number
+        int[] octalNum = new int[100];
+ 
+        // counter for octal number array
+        int i = 0;
+        while (n != 0) {
+            // storing remainder in octal array
+            octalNum[i] = n % 8;
+            n = n / 8;
+            i++;
         }
-
-        return octalNumber;
+ 
+        // Printing octal number array in reverse order
+        for (int j = i - 1; j >= 0; j--){
+            return octalNum[j];
+        }            
     }
 }
